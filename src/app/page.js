@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
   const [files, setFiles] = useState([]);
@@ -122,7 +123,7 @@ export default function Home() {
             </button>
           </div>
           <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} p-6 sm:p-8 md:p-10 rounded-xl shadow-lg max-w-md sm:max-w-xl mx-auto border ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
-            <img src="/api/placeholder/100/100" alt="Google Drive" className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4"/>
+            <image src="/api/placeholder/100/100" alt="Google Drive" className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4"/>
             <h1 className={`text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Google Drive File Manager</h1>
             <p className={`mb-6 sm:mb-8 text-sm sm:text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Connect to your Google Drive to access and download your files.</p>
             <button onClick={handleLogin} className="px-4 py-2 sm:px-6 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md flex items-center mx-auto transition-colors font-medium text-sm sm:text-base">
@@ -160,7 +161,7 @@ export default function Home() {
           <div className={`${darkMode ? 'bg-gray-800 border-gray-700 text-gray-300' : 'bg-yellow-50 border-yellow-100 text-yellow-800'} rounded-lg p-4 sm:p-6 border`}>
             <div className="flex flex-col sm:flex-row items-center text-center sm:text-left">
               <svg className="w-6 h-6 mb-2 sm:mb-0 sm:mr-3 text-yellow-400 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" /></svg>
-              <p className="text-sm sm:text-base">No files found in your Google Drive or you don't have access to any files.</p>
+              <p className="text-sm sm:text-base">No files found in your Google Drive or you don&apos;t have access to any files.</p>
             </div>
           </div>
         ) : (
